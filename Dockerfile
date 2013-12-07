@@ -7,6 +7,7 @@ RUN apt-get install -q -y openjdk-7-jre-headless firefox xvfb
 
 ADD ./install /
 ADD http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar /srv/
+ADD http://selenium.googlecode.com/files/selenium-server-standalone-2.31.0.jar /srv/
 
 EXPOSE 4444
 
