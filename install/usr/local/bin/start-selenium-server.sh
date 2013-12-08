@@ -19,4 +19,20 @@ case "$1" in
     export VERSION=2.31.0
 esac
 
-java -jar /srv/selenium-server-standalone-$VERSION.jar
+case "$2" in
+  24)
+    export FF_VERSION=24
+    ;;
+  25)
+    export FF_VERSION=25
+    ;;
+  help)
+    "$0" help
+    echo "only support 24 and 25. default to 24"
+    echo ""
+    ;;
+  *)
+    export FF_VERSION=24
+esac
+
+java -jar /srv/selenium-server-standalone-$VERSION.jar -Dwebdriver.firefox.binary_path=/srv/firefox-$FF_VERSION/firefox/firefox
