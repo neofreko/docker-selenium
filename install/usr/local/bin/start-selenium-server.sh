@@ -35,4 +35,4 @@ case "$2" in
     export FF_VERSION=24
 esac
 
-java -jar /srv/selenium-server-standalone-$VERSION.jar -Dwebdriver.firefox.binary_path=/srv/firefox-$FF_VERSION/firefox/firefox
+java -jar /srv/selenium-server-standalone-$VERSION.jar -Dwebdriver.firefox.bin=/srv/firefox-$FF_VERSION/firefox/firefox

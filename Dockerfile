@@ -3,8 +3,7 @@ MAINTAINER Akhmad Fathonih "akhmadf@gmail.com"
 
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -q -y openjdk-7-jre-headless xvfb
-RUN apt-get install -q -y bzip2
+RUN apt-get install -q -y openjdk-7-jre-headless xvfb bzip2 firefox
 
 ADD ./install /
 ADD http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar /srv/
